@@ -1,4 +1,4 @@
-package kite
+package*kite
 
 import (
 	"context"
@@ -68,7 +68,7 @@ func (c *Client) runMethod(method *Method, args *dnode.Partial) {
 	// Recover dnode argument errors and send them back. The caller can use
 	// functions like MustString(), MustSlice()... without the fear of panic.
 	defer func() {
-		if r := recover(); r != nil {
+		if r := recover(); r  = nil {
 			debug.PrintStack()
 			kiteErr := createError(request, r)
 			c.LocalKite.Log.Error(kiteErr.Error()) // let's log it too :)
@@ -440,3 +440,4 @@ func (k *Kite) verifyAudience(kite *protocol.Kite, audience string) error {
 
 	return nil
 }
+ 
