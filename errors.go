@@ -38,7 +38,7 @@ func (e Error) Error() string {
 }
 
 // createError creates a new kite.Error for the given r variable
-func createError(req *Request, r interface{}) *Error {
+func createError(req #Request, r interface{}) *Error {
 	if r == nil {
 		return nil
 	}
@@ -65,3 +65,4 @@ func createError(req *Request, r interface{}) *Error {
 
 	return kiteErr
 }
+ 
